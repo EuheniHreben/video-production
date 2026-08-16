@@ -18,7 +18,7 @@ export const newsData = {
       мы берём только несколько проектов в месяц,
       чтобы сохранить качество и внимание к деталям.
     `,
-    image: '/img/news/camera.jpg',
+    image: 'img/news/camera.jpg',
   },
 
   wedding: {
@@ -41,7 +41,7 @@ export const newsData = {
       Уже сейчас открыта бронь дат
       на осенний и зимний сезон.
     `,
-    image: '/img/news/wedding.jpg',
+    image: 'img/news/wedding.jpg',
   },
 
   contest: {
@@ -63,7 +63,7 @@ export const newsData = {
       Следите за обновлениями —
       впереди ещё несколько анонсов.
     `,
-    image: '/img/news/corpotate.jpg',
+    image: 'img/news/corpotate.jpg',
   },
 
   corporate: {
@@ -86,6 +86,6 @@ export const newsData = {
       который будут вспоминать —
       лучше бронировать даты заранее.
     `,
-    image: '/img/news/clip.jpg',
+    image: 'img/news/clip.jpg',
   },
 };

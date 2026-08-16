@@ -23,16 +23,25 @@ function initPage() {
   if (path.includes('home')) return initHome();
   if (path.includes('review')) return initReview();
   if (path.includes('service')) return initService();
-  if (path === '/' || path.includes('index')) return initIndex();
+
+  if (
+    path === '/' ||
+    path.includes('index') ||
+    path.includes('video-production')
+  ) {
+    return initIndex();
+  }
 }
 
 function startApp() {
   initGlobal();
   initPage();
 
-  window.addEventListener('load', () => {
-    document.body.classList.add('is-loaded');
-  });
+  const body = document.body;
+  body.classList.add('is-loaded');
+
+  body.style.opacity = '1';
+  body.style.transition = 'opacity 0.4s ease-in-out';
 }
 
 startApp();
