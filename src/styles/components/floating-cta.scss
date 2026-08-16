@@ -1,0 +1,79 @@
+@use "../mixins";
+@use "../variables";
+
+.floating-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+
+  @include mixins.md {
+    right: 24px;
+    bottom: 24px;
+  }
+
+  z-index: 400;
+
+  padding: 14px;
+
+  @include mixins.md {
+    padding: 16px 22px;
+  }
+
+  border: 1px solid variables.$color-primary-light;
+  border-radius: 999px;
+
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(4px);
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-2px);
+      background: variables.$color-primary-light;
+    }
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.96);
+  }
+}
+
+.floating-cta:focus-visible {
+  outline: 2px solid variables.$color-primary;
+  outline-offset: 4px;
+}
+
+.floating-cta__text {
+  display: none;
+  color: variables.$color-primary;
+}
+
+@include mixins.md {
+  .floating-cta__icon {
+    display: none;
+  }
+
+  .floating-cta__text {
+    display: inline-flex;
+  }
+}
+
+.floating-cta__icon {
+  width: 24px;
+  height: 24px;
+  color: variables.$color-primary;
+  fill: currentColor;
+}

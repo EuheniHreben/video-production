@@ -1,0 +1,141 @@
+@use "../mixins";
+
+.portfolio-modal {
+  display: flex;
+  align-items: stretch;
+
+  gap: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: #111;
+
+  color: #fff;
+
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.65);
+}
+
+.portfolio-modal.ui-modal__content {
+  flex-direction: column;
+
+  max-width: none;
+
+  width: min(1400px, 92vw);
+
+  height: min(820px, 90vh);
+
+  margin: auto;
+
+  @include mixins.md {
+    flex-direction: row;
+  }
+}
+
+.portfolio-modal__video {
+  flex: 1;
+
+  width: auto;
+  min-width: 0;
+
+  height: 40vh;
+
+  object-fit: cover;
+
+  pointer-events: none;
+
+  background: #000;
+
+  display: block;
+
+  filter: contrast(1.02) brightness(0.96);
+
+  @include mixins.md {
+    height: 100%;
+  }
+}
+
+.portfolio-modal__body {
+  flex: 0 0 clamp(320px, 28vw, 420px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  padding: 28px 20px;
+
+  background: linear-gradient(to bottom, #1b1b1b, #111);
+
+  @include mixins.md {
+    padding: 48px 40px;
+  }
+}
+
+.portfolio-modal__category {
+  font-size: 13px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  color: #8ab4ff;
+
+  opacity: 0.9;
+}
+
+.portfolio-modal__title {
+  font-size: clamp(32px, 3vw, 52px);
+
+  line-height: 0.95;
+
+  font-weight: 700;
+}
+
+.portfolio-modal__description {
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  opacity: 0.82;
+}
+
+.portfolio-modal__meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.portfolio-modal__duration,
+.portfolio-modal__team {
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 14px;
+}
+
+.portfolio-modal__highlight {
+  font-weight: 700;
+  color: #8ab4ff;
+}
+
+.portfolio-modal .btn {
+  margin-top: auto;
+}
+
+.portfolio-modal .ui-modal__close {
+  z-index: 10;
+
+  top: 24px;
+  right: 24px;
+
+  backdrop-filter: blur(10px);
+}

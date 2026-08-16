@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html,
+      body {
+        background: #222;
+      }
+
+      body {
+        opacity: 0;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Video Production | Reviews</title>
+  </head>
+
+  <body>
+    <header class="header header--wrapper">
+      <div class="container header-container header--spaced">
+        <a href="/index.html" class="logo">
+          <img
+            src="/img/logo.png"
+            alt="Логотип Video Production"
+            class="logo__img blink"
+            data-blink
+          />
+        </a>
+
+        <button class="burger" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="/home.html" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="/service.html" class="menu__link">Услуги</a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a href="/review.html" class="menu__link">Отзывы</a>
+            </li>
+          </ul>
+        </nav>
+
+        <address class="address">
+          <a href="tel:+88007003030" class="address__phone">8 800 700 30 30</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown__link">График работы</a>
+            <div class="dropdown__menu">
+              <div class="dropdown__triangle"></div>
+              <ul class="dropdown__list">
+                <li class="dropdown__item dropdown__item--title">
+                  пн-вс: 09:00 - 20:00
+                </li>
+                <li class="dropdown__item">Обед: 14:00 - 14:30</li>
+              </ul>
+            </div>
+          </div>
+        </address>
+      </div>
+
+      <div class="container header__bottom">
+        <h1 class="header__title">Отзывы</h1>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="/home.html" class="breadcrumbs__link">Главная</a>
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item--active">
+              <span class="breadcrumbs__link" aria-current="page">Отзывы</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu">
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          <li>
+            <a href="/home.html">Главная</a>
+          </li>
+          <li>
+            <a href="/service.html">Услуги</a>
+          </li>
+          <li>
+            <a href="/review.html">Отзывы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main">
+      <section class="reviews">
+        <div class="container">
+          <ul class="reviews__list">
+            <li class="reviews__item review">
+              <div class="review__contact">
+                <div class="review__img-box">
+                  <img
+                    src="./img/review1.png"
+                    alt="Иван Петрович"
+                    class="review__img"
+                  />
+                </div>
+                <div class="review__info">
+                  <p class="review__name">Иван Петрович</p>
+                </div>
+              </div>
+              <div class="review__desc">
+                <div class="review__title">Съемка клипа</div>
+                <div class="review__text">
+                  <p>
+                    «Профессиональный подход и креативные идеи сделали наш клип
+                    особенным. Очень доволен результатом.»
+                  </p>
+                </div>
+                <div class="review__date">3 Ноября 2025 г.</div>
+              </div>
+            </li>
+            <li class="reviews__item review">
+              <div class="review__contact">
+                <div class="review__img-box">
+                  <img
+                    src="./img/review2.png"
+                    alt="Лиза Сидорова"
+                    class="review__img"
+                  />
+                </div>
+                <div class="review__info">
+                  <p class="review__name">Лиза Сидорова</p>
+                </div>
+              </div>
+              <div class="review__desc">
+                <div class="review__title">Свадебная съемка</div>
+                <div class="review__text">
+                  <p>
+                    «Спасибо за волшебные кадры нашего важного дня! Всё было
+                    очень деликатно и ненавязчиво — мы почти не замечали камеру.
+                    В итоге получили живые и трогательные моменты, которые
+                    теперь можно пересматривать бесконечно. Монтаж просто
+                    восхитительный — эмоции переданы идеально. Вы настоящие
+                    мастера своего дела!»
+                  </p>
+                </div>
+                <div class="review__date">20 Ноября 2025 г.</div>
+              </div>
+            </li>
+            <li class="reviews__item review">
+              <div class="review__contact">
+                <div class="review__img-box">
+                  <img
+                    src="./img/review3.png"
+                    alt="Екатерина Афанасьева"
+                    class="review__img"
+                  />
+                </div>
+                <div class="review__info">
+                  <p class="review__name">Екатерина Афанасьева</p>
+                </div>
+              </div>
+              <div class="review__desc">
+                <div class="review__title">
+                  Очень понравилась работа в студии
+                </div>
+                <div class="review__text">
+                  <p>
+                    «В студии царит комфортная и творческая атмосфера, а команда
+                    очень внимательная и отзывчивая. Мне помогали не только с
+                    техническими моментами, но и с идеями для образа и
+                    позирования. Это придало съёмке живость и натуральность.
+                    Очень приятно было работать — фото и видео получились
+                    стильными и душевными. Обязательно вернусь!»
+                  </p>
+                </div>
+                <div class="review__date">7 Декабря 2025 г.</div>
+              </div>
+            </li>
+            <li class="reviews__item review">
+              <div class="review__contact">
+                <div class="review__img-box">
+                  <img
+                    src="./img/review4.png"
+                    alt="Антон Игоревич"
+                    class="review__img"
+                  />
+                </div>
+                <div class="review__info">
+                  <p class="review__name">Антон Игоревич</p>
+                </div>
+              </div>
+              <div class="review__desc">
+                <div class="review__title">
+                  Заказывал съемку рекламы. И не пожалел!
+                </div>
+                <div class="review__text">
+                  <p>
+                    «Работа с этой студией — отличный опыт. Все было
+                    организовано чётко и без задержек, команда внимательно
+                    выслушала мои пожелания и предложила свежие идеи, которые
+                    идеально подошли для моего бренда. Рекламное видео
+                    получилось динамичным и цепляющим, сразу почувствовался
+                    отклик аудитории. Очень рад, что выбрал именно эту команду.
+                    Рекомендую всем, кто хочет качественный и профессиональный
+                    результат!»
+                  </p>
+                </div>
+                <div class="review__date">30 Декабря 2025 г.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="banner"></section>
+      <section class="form">
+        <div class="container">
+          <h2 class="form__title">Оставьте отзыв</h2>
+          <form class="form__form">
+            <div class="form__group form__group--phones">
+              <input
+                type="text"
+                name="name"
+                class="form__input"
+                placeholder="Ваше имя"
+                id="nameValue"
+                
+              />
+              <input
+                type="text"
+                name="link"
+                class="form__input"
+                placeholder="Тема отзыва"
+                id="titleValue"
+                
+              />
+            </div>
+            <div class="form__group">
+              <textarea
+                name="textarea"
+                class="form__input form__textarea form__input--textarea"
+                placeholder="Напишите свой честный отзыв;)"
+                id="descValue"
+                
+              ></textarea>
+            </div>
+            <div class="form__group form__group--tags">
+              <p class="form__services">
+                Какими услугами компании пользуетесь?
+              </p>
+              <ul class="form__list">
+                <li class="form__item control">
+                  <label class="control__label">
+                    <input
+                      name="services"
+                      type="checkbox"
+                      class="control__input"
+                    />
+                    <span class="control__tag tag"> Съёмка клипа </span>
+                  </label>
+                </li>
+
+                <li class="form__item control">
+                  <label class="control__label">
+                    <input
+                      name="services"
+                      type="checkbox"
+                      class="control__input"
+                    />
+                    <span class="control__tag tag"> Съёмка рекламы </span>
+                  </label>
+                </li>
+
+                <li class="form__item control">
+                  <label class="control__label">
+                    <input
+                      name="services"
+                      type="checkbox"
+                      class="control__input"
+                    />
+                    <span class="control__tag tag"> Съёмка свадьбы </span>
+                  </label>
+                </li>
+
+                <li class="form__item control">
+                  <label class="control__label">
+                    <input
+                      name="services"
+                      type="checkbox"
+                      class="control__input"
+                    />
+                    <span class="control__tag tag"> Студийная съёмка </span>
+                  </label>
+                </li>
+
+                <li class="form__item control">
+                  <label class="control__label">
+                    <input
+                      name="services"
+                      type="checkbox"
+                      class="control__input"
+                    />
+                    <span class="control__tag tag">
+                      Пока не пользовался услугами
+                    </span>
+                  </label>
+                </li>
+
+                <li class="form__item control">
+                  <label class="control__label">
+                    <input
+                      name="services"
+                      type="checkbox"
+                      class="control__input"
+                    />
+                    <span class="control__tag tag"> Другое </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="form__btn">
+              <button type="reset" class="btn btn_type_third">Очистить</button>
+              <button type="submit" class="btn btn_type_first" id="myBtn">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container footer--line">
+        <a href="/index.html" class="logo">
+          <img
+            src="/img/logo.png"
+            alt="Логотип Video Production"
+            class="logo__img"
+          />
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="/home.html" class="menu__link">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a href="/service.html" class="menu__link">Услуги</a>
+            </li>
+            <li class="menu__item menu__item--active">
+              <a href="/review.html" class="menu__link">Отзывы</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><svg
+              class="social__icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              /></svg
+          ></a>
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="social__icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              />
+            </svg>
+          </a>
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer"
+            ><svg
+              class="social__icon"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+              /></svg
+          ></a>
+        </div>
+        <address class="address">
+          <div class="address__free">Бесплатный звонок</div>
+          <a href="tel:+88007003030" class="address__phone">8 800 700 30 30</a>
+        </address>
+      </div>
+    </footer>
+
+    <button class="floating-cta" data-modal-open="order-modal">
+      <svg
+        class="floating-cta__icon"
+        role="img"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zM4.911 7.089h11.456a2.197 2.197 0 0 1 2.165 2.19v5.863a2.213 2.213 0 0 1-2.177 2.178H8.04c-1.174 0-2.04-.99-2.04-2.178v-4.639L4.503 7.905c-.31-.42-.05-.816.408-.816zm3.415 2.19c-.347 0-.68.21-.68.544 0 .334.333.544.68.544h7.905c.346 0 .68-.21.68-.544 0-.334-.334-.545-.68-.545zm0 2.177c-.347 0-.68.21-.68.544 0 .334.333.544.68.544h7.905c.346 0 .68-.21.68-.544 0-.334-.334-.544-.68-.544zm-.013 2.19c-.346 0-.68.21-.68.544 0 .334.334.544.68.544h5.728c.347 0 .68-.21.68-.544 0-.334-.333-.545-.68-.545z"
+        />
+      </svg>
+
+      <span class="floating-cta__text"> Создать заявку </span>
+    </button>
+
+    <div class="ui-modal" id="order-modal">
+      <div class="ui-modal__overlay"></div>
+
+      <div class="ui-modal__content">
+        <button class="ui-modal__close" aria-label="Закрыть модальное окно">
+          ✕
+        </button>
+        <h2 class="ui-modal__title">Обсудим ваш проект</h2>
+        <p class="ui-modal__subtitle">
+          Оставьте контакты — мы свяжемся с вами в течение 15 минут
+        </p>
+        <form class="ui-modal__form">
+          <div class="ui-modal__field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="ui-modal__field">
+            <label for="contact">Телефон или Telegram</label>
+            <input id="contact" name="contact" type="text" required />
+          </div>
+
+          <div class="ui-modal__field">
+            <label for="message">Коротко о задаче</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button type="submit" class="ui-modal__btn btn btn_type_first">
+            Отправить
+          </button>
+        </form>
+        <div class="ui-modal__success-block">
+          <p class="ui-modal__success">
+            Спасибо! Мы свяжемся с вами в ближайшее время.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+@use "../variables";
+
+.index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('/img/bg.png') center / cover no-repeat;
+}
+
+.index__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(900px, 90vw);
+  aspect-ratio: 16 / 9;
+  padding: 40px;
+  background: url('/img/rec.png') center / contain no-repeat;
+}
+
+.index__central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(24px, 5vw, 40px);
+
+  opacity: 0;
+  animation: rotate 1.5s ease forwards;
+}
+
+.index__img {
+  width: 100%;
+}
+
+.index__loading {
+  width: min(240px, 70vw);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  opacity: 0;
+
+  
+  transform: translateY(10px);
+  
+  transition:
+  opacity 0.5s ease,
+  transform 0.5s ease;
+}
+
+.index__loading.is-visible {
+  opacity: 1;
+  
+  transform: translateY(0);
+}
+
+.index__progress {
+  position: relative;
+  
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.index__progress::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: variables.$color-primary;
+
+  transform: translateX(-100%);
+}
+
+.index__loading.is-visible .index__progress::after {
+  animation: loader-progress 2.2s ease forwards;
+}
+
+.index__text {
+  text-align: center;
+
+  font-size: 13px;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  opacity: 0.65;
+}
+
+.blink {
+  animation: blink var(--animation-time) linear infinite;
+}

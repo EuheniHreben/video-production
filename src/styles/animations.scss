@@ -1,0 +1,48 @@
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0.3;
+    filter: blur(0px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: scale(0.1) rotate(40deg);
+    filter: blur(10px);
+  }
+  50% {
+    transform: rotate(-10deg);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    transform: scale(0.1) rotate(40deg);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes loader-progress {
+  to {
+    transform: translateX(0%);
+  }
+}

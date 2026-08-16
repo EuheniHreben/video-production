@@ -1,0 +1,37 @@
+@use "../mixins";
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mixins.md {
+    gap: 28px;
+  }
+}
+
+.header--wrapper {
+  background: url('/img/top-line.jpg') center center / cover no-repeat;
+}
+
+@include mixins.lg {
+  .header--wrapper {
+    padding-bottom: 140px 0;
+  }
+}
+
+.header__title {
+  margin-bottom: 40px;
+
+  @include mixins.lg {
+    margin-bottom: 80px;
+  }
+}
+
+.header--spaced {
+  padding: 24px 0 56px;
+
+  @include mixins.lg {
+    padding: 30px 0 80px;
+  }
+}

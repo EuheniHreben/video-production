@@ -1,0 +1,37 @@
+// ======================
+// 📐 SIZES
+// ======================
+
+$container-width: 1280px;
+$base-font-size: 16px;
+
+// ======================
+// 📱 BREAKPOINTS
+// ======================
+
+$bp-md: 768px;
+$bp-lg: 1024px;
+
+// ======================
+// 🎨 COLORS
+// ======================
+
+$color-primary: #ff5500;
+$color-primary-hover: #e64a00;
+$color-primary-light: rgba($color-primary, 0.15);
+
+$color-gray: #8e8e8e;
+$color-text: #444;
+$color-bg: #ffffff;
+
+// ======================
+// 📏 SPACING
+// ======================
+
+$space-xs: 5px;
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 30px;
+$space-xl: 60px;
+
+// перенести переменные в стили!!!!!!!

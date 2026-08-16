@@ -1,0 +1,22 @@
+@use "../mixins";
+@use "../variables";
+
+.address {
+  font-style: normal;
+  display: none;
+
+  @include mixins.md {
+    display: block;
+  }
+}
+
+.address__phone {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .address__phone:hover {
+    color: variables.$color-primary;
+  }
+}

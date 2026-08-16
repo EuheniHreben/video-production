@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html,
+      body {
+        background: #222;
+      }
+
+      body {
+        opacity: 0;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="preload" as="image" href="/img/logo-big.png" />
+    <title>Video Production | Welcome</title>
+  </head>
+
+  <body data-page="intro">
+    <section class="index">
+      <div class="index__container">
+        <div class="index__central">
+          <div class="index__img-box">
+            <img
+              src="/img/logo-big.png"
+              alt="Логотип Video Production"
+              class="index__img blink"
+              data-blink
+            />
+          </div>
+          <div class="index__loading">
+            <div class="index__progress" aria-hidden="true"></div>
+
+            <p class="index__text" aria-live="polite">Loading...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+@use "../mixins";
+
+.news__title {
+  margin-bottom: 32px;
+
+  @include mixins.lg {
+    margin-bottom: 48px;
+  }
+}
+
+.news__list {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 16px;
+
+  @include mixins.md {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+  }
+
+  @include mixins.lg {
+    gap: 32px;
+  }
+}
+
+.news-block {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+
+  will-change: transform;
+}
+
+.news-block:hover {
+  background: rgba(255, 255, 255, 0.05);
+
+  border-color: rgba(90, 140, 255, 0.2);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(90, 140, 255, 0.08);
+}
+
+.news-block__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease-in;
+}
+
+.news-block:hover .news-block__img {
+  transform: scale(1.04);
+}
+
+.news-block__desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 30px;
+  color: white;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.3),
+    transparent
+  );
+}
+
+.news-block__subtitle {
+  font-size: 24px;
+}
+
+.news-block__text {
+  opacity: 0.8;
+}
+
+.news-modal {
+  max-width: 520px;
+
+  padding: 0px;
+
+  overflow: hidden;
+}
+
+.news-modal__content {
+  max-height: calc(100vh - 60px);
+}
+
+.ui-modal__content.news-modal {
+  background: #2f2d2d;
+}
+
+.news-modal__img {
+  width: 100%;
+  height: 230px;
+
+  object-fit: cover;
+}
+
+.news-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 36px;
+  overflow-y: auto;
+}
+
+.news-modal__title {
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.news-modal__date {
+  font-size: 13px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: #8d8d8d;
+}
+
+.news-modal__text {
+  line-height: 1.5;
+
+  color: #d0d0d0;
+
+  white-space: pre-line;
+}

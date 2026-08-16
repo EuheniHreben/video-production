@@ -1,0 +1,92 @@
+@use "../mixins";
+@use "../variables";
+
+.menu {
+  display: none;
+
+  @include mixins.md {
+    display: block;
+  }
+}
+
+.menu__list {
+  display: flex;
+  gap: clamp(16px, 5vw, 60px);
+}
+
+.menu__item--active {
+  color: variables.$color-primary;
+}
+
+.menu__link {
+  transition: color 0.2s ease-in;
+
+  @media (hover: hover) {
+    &:hover {
+      color: variables.$color-primary;
+    }
+  }
+
+  &--active {
+    color: variables.$color-primary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid variables.$color-primary;
+    outline-offset: 4px;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: flex-end;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+
+  z-index: 500;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu__nav {
+  width: 280px;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  
+  padding: 120px 32px;
+  
+  background: #111;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-menu.active .mobile-menu__nav {
+  transform: translateX(0);
+}
+
+.mobile-menu__nav a {
+  font-size: 24px;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

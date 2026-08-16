@@ -1,0 +1,18 @@
+@use "../variables";
+
+.control {
+  cursor: pointer;
+}
+
+.control__input {
+  appearance: none;
+}
+
+.control__input:checked + .control__tag {
+  background: variables.$color-primary;
+  color: #fff;
+}
+
+.control__input:focus + .control__tag {
+  outline-offset: 2px;
+}

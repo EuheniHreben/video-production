@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: min(#{$container-width}, 100% - (#{$space-md} * 2));
+  margin-inline: auto;
+}

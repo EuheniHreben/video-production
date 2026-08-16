@@ -1,0 +1,13 @@
+.info {
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.info__price {
+  font-weight: bold;
+
+  body.dark & {
+    color: #fff;
+  }
+}

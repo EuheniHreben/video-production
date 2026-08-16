@@ -1,0 +1,45 @@
+@use "../mixins";
+@use "../variables";
+
+.social {
+  display: flex;
+  gap: 16px;
+
+  @include mixins.md {
+    gap: 24px;
+  }
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.social a:focus-visible {
+  outline: 2px solid variables.$color-primary;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .social a:hover {
+    color: variables.$color-primary;
+    transform: scale(1.1);
+  }
+}
+
+.social__icon {
+  width: 34px;
+  height: 34px;
+
+  fill: currentColor;
+}

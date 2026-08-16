@@ -1,0 +1,24 @@
+@use "../variables";
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  
+  transition: opacity 0.2s ease;
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid variables.$color-primary;
+    outline-offset: 4px;
+  }
+}
+
+.logo__img {
+  width: clamp(140px, 12vw, 180px);
+  height: auto;
+}

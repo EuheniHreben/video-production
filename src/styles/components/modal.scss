@@ -1,0 +1,226 @@
+@use "../mixins";
+@use "../variables";
+
+.ui-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  opacity: 0;
+  padding: 16px;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.ui-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ui-modal__overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  backdrop-filter: blur(8px);
+}
+
+.ui-modal--video .ui-modal__overlay {
+  backdrop-filter: none;
+}
+
+@include mixins.md {
+  .ui-modal--video .ui-modal__overlay {
+    backdrop-filter: blur(8px);
+  }
+}
+
+.ui-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+  background: variables.$color-primary;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+@media (hover: hover) {
+  .ui-modal__close:hover {
+    transform: scale(1.1);
+  }
+}
+
+.ui-modal__close:focus-visible {
+  outline: 2px dashed #007acc;
+  outline-offset: 2px;
+}
+
+.ui-modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  margin: 5vh auto;
+  padding: 24px;
+  border: 1px solid rgba(90, 140, 255, 0.15);
+  border-radius: 16px;
+
+  background: linear-gradient(to bottom, #1b1b1b, #111);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+  transform: translateY(80px) scale(0.95);
+  opacity: 0;
+  will-change: transform;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
+
+  @include mixins.md {
+    padding: 50px;
+  }
+}
+
+.ui-modal.active .ui-modal__content {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+}
+
+.ui-modal__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ui-modal__subtitle {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.ui-modal__success-block {
+  display: none;
+}
+
+.ui-modal--success .ui-modal__form {
+  display: none;
+}
+
+.ui-modal--success .ui-modal__success-block {
+  display: block;
+}
+
+.ui-modal--success .ui-modal__title,
+.ui-modal--success .ui-modal__subtitle {
+  display: none;
+}
+
+.ui-modal__success {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #fff;
+  padding: 20px;
+}
+
+.ui-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mixins.md {
+    gap: 32px;
+  }
+}
+
+.ui-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ui-modal__field label {
+  font-size: 14px;
+  color: #888;
+}
+
+.ui-modal__field input:focus,
+.ui-modal__field textarea:focus {
+  outline: none;
+  border-color: variables.$color-primary;
+  box-shadow: 0 0 0 2px rgba(90, 140, 255, 0.2);
+}
+
+.ui-modal__field input,
+.ui-modal__field textarea {
+  padding: 12px 14px;
+
+  border-radius: 8px;
+  border: 1px solid #333;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+
+  font-size: 16px;
+  resize: none;
+
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
+}
+
+.ui-modal__field input:hover,
+.ui-modal__field textarea:hover {
+  border-color: variables.$color-primary;
+}
+
+.ui-modal__btn {
+  align-self: stretch;
+  position: relative;
+}
+
+.ui-modal__btn.is-loading {
+  pointer-events: none;
+  color: transparent;
+}
+
+.ui-modal__btn.is-loading::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

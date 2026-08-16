@@ -1,0 +1,16 @@
+h1 {
+  font-size: calc(36px + 36 * (100vw / 1280));
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.34;
+}
+
+h2 {
+  font-size: calc(18px + 18 * (100vw / 1280));
+  font-weight: bold;
+}
+
+h3 {
+  font-size: calc(8px + 18 * (100vw / 1280));
+  font-weight: bold;
+}
