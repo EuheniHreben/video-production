@@ -1,6 +1,6 @@
 # Video Production Studio Website
 
-![Website Preview](./preview.jpg)
+[![Кликните, чтобы открыть сайт](./preview.jpg)](https://euhenihreben.github.io/video-production/)
 
 A premium, performance-optimized multi-page web application designed as a modern commercial concept for a video production and motion design studio. This project demonstrates production-ready frontend design, modular architecture, and advanced JavaScript implementation.
 
