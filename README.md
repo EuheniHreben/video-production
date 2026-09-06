@@ -39,3 +39,13 @@ To run this project locally, follow these simple steps:
    ```bash
    npm run dev
    ```
+
+---
+
+## 📬 Contact & Hire Me
+
+If you need a high-quality landing page, corporate website, or interactive web application, feel free to reach out:
+
+- **Telegram:** [@dharmaMannn]
+- **Email:** euhenihreben@gmail.com
+
