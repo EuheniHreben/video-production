@@ -29,7 +29,7 @@ To run this project locally, follow these simple steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/EuheniHreben/video-production.git
    ```
 2. **Install dependencies:**
    ```bash
